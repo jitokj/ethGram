@@ -1,0 +1,223 @@
+{
+  "contractName": "Ethgram",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/jito/Documents/ethereum_projects/ethGram/src/contracts/ethGram.sol\":\"Ethgram\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/jito/Documents/ethereum_projects/ethGram/src/contracts/ethGram.sol\":{\"keccak256\":\"0xe6c7e788eaab1e9132f35d1c2bf38d0e4c5aba94eb5ac0eca4621d6d47e97704\",\"urls\":[\"bzz-raw://c7560a1ba22c1041aab7db70c6fb0421a8967135f5e83d27a30965e9f2d15b5f\",\"dweb:/ipfs/QmYxhxrWoh4BfsUodbs71eYchgRkgvKXeBJPPJAt6JEnEh\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040518060400160405280600781526020017f4574684772616d000000000000000000000000000000000000000000000000008152506000908051906020019061004f929190610062565b5034801561005c57600080fd5b50610107565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a357805160ff19168380011785556100d1565b828001600101855582156100d1579182015b828111156100d05782518255916020019190600101906100b5565b5b5090506100de91906100e2565b5090565b61010491905b808211156101005760008160009055506001016100e8565b5090565b90565b610186806101166000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806306fdde0314610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea265627a7a7231582019794bea2f4b2713e9d4c0c4868cc688defe4a7c728ee5230d4e1a0b82f673a364736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806306fdde0314610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea265627a7a7231582019794bea2f4b2713e9d4c0c4868cc688defe4a7c728ee5230d4e1a0b82f673a364736f6c63430005100032",
+  "sourceMap": "62:58:1:-;;;86:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;62:58;8:9:-1;5:2;;;30:1;27;20:12;5:2;62:58:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "62:58:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;62:58:1;;;;;;;;;;;;;;;;;;;86:30;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;86:30:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "//// SPDX-License-Identifier: MIT\r\npragma solidity 0.5.16;\r\n\r\ncontract Ethgram {\r\n    string public name = \"EthGram\";\r\n}\r\n",
+  "sourcePath": "/home/jito/Documents/ethereum_projects/ethGram/src/contracts/ethGram.sol",
+  "ast": {
+    "absolutePath": "/home/jito/Documents/ethereum_projects/ethGram/src/contracts/ethGram.sol",
+    "exportedSymbols": {
+      "Ethgram": [
+        62
+      ]
+    },
+    "id": 63,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 62,
+        "linearizedBaseContracts": [
+          62
+        ],
+        "name": "Ethgram",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 61,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 62,
+            "src": "86:30:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 59,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "86:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "4574684772616d",
+              "id": 60,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "107:9:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_ab4b71070fec0b7b3f6605e2de0a92e291713544848bb0d0368e802263c6bb6c",
+                "typeString": "literal_string \"EthGram\""
+              },
+              "value": "EthGram"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 63,
+        "src": "62:58:1"
+      }
+    ],
+    "src": "35:87:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/jito/Documents/ethereum_projects/ethGram/src/contracts/ethGram.sol",
+      "exportedSymbols": {
+        "Ethgram": [
+          62
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 58,
+        "name": "PragmaDirective",
+        "src": "35:23:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            62
+          ],
+          "name": "Ethgram",
+          "scope": 63
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "name",
+              "scope": 62,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string"
+                },
+                "id": 59,
+                "name": "ElementaryTypeName",
+                "src": "86:6:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "4574684772616d",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "string",
+                  "type": "literal_string \"EthGram\"",
+                  "value": "EthGram"
+                },
+                "id": 60,
+                "name": "Literal",
+                "src": "107:9:1"
+              }
+            ],
+            "id": 61,
+            "name": "VariableDeclaration",
+            "src": "86:30:1"
+          }
+        ],
+        "id": 62,
+        "name": "ContractDefinition",
+        "src": "62:58:1"
+      }
+    ],
+    "id": 63,
+    "name": "SourceUnit",
+    "src": "35:87:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x5f58e297C617a5abfEcE12655B4AD0BDe9046bCa",
+      "transactionHash": "0xda9658456dc4c87775008cf215a85607806ae832a39e7a8c154623280bb3e4a2"
+    }
+  },
+  "schemaVersion": "3.4.0",
+  "updatedAt": "2021-04-29T10:40:06.369Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
