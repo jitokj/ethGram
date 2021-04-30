@@ -23,7 +23,7 @@ const Navbar = (props) => {
       <ul className="navbar-nav px-3">
         <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
           <small className="text-secondary">
-            <small id="account">{"0x0"}</small>
+            <small id="account">{props.account}</small>
           </small>
           {props.account ? (
             <img
