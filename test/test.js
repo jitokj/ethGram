@@ -1,4 +1,4 @@
-const Ethgram = artifacts.require("./ethgram.sol");
+const Ethgram = artifacts.require("./Ethgram.sol");
 
 require("chai").use(require("chai-as-promised")).should();
 
@@ -20,7 +20,7 @@ contract("Ethgram", ([deployer, author, tipper]) => {
 
     it("has a name", async () => {
       const name = await ethgram.name();
-      assert.equal(name, "Ethgram");
+      assert.equal(name, "EthGram");
     });
   });
 
@@ -37,11 +37,11 @@ contract("Ethgram", ([deployer, author, tipper]) => {
 
     //check event
     it("creates images", async () => {
-      // SUCESS
+      // SUCCESS
       assert.equal(imageCount, 1);
       const event = result.logs[0].args;
       assert.equal(event.id.toNumber(), imageCount.toNumber(), "id is correct");
-      assert.equal(event.hash, hash, "Hash is correct");
+      assert.equal(event.hashes, hash, "Hash is correct");
       assert.equal(
         event.description,
         "Image description",
@@ -63,7 +63,7 @@ contract("Ethgram", ([deployer, author, tipper]) => {
     it("lists images", async () => {
       const image = await ethgram.images(imageCount);
       assert.equal(image.id.toNumber(), imageCount.toNumber(), "id is correct");
-      assert.equal(image.hash, hash, "Hash is correct");
+      assert.equal(image.hashes, hash, "Hash is correct");
       assert.equal(
         image.description,
         "Image description",
@@ -87,7 +87,7 @@ contract("Ethgram", ([deployer, author, tipper]) => {
       // SUCCESS
       const event = result.logs[0].args;
       assert.equal(event.id.toNumber(), imageCount.toNumber(), "id is correct");
-      assert.equal(event.hash, hash, "Hash is correct");
+      assert.equal(event.hashes, hash, "Hash is correct");
       assert.equal(
         event.description,
         "Image description",
