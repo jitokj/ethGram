@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import Web3 from "web3";
-import Identicon from "identicon.js";
+
 import "./App.css";
 import Ethgram from "../abis/Ethgram.json";
 import Navbar from "./Navbar";
@@ -17,6 +17,7 @@ const App = () => {
   const [img,setImg] = useState([]);
   const [imgCount,setImgCount] = useState(0);
   const [buff,setBuff] = useState(null);
+ 
 
  useEffect(()=>{
     const  loadWeb3 = async ()=>{
@@ -56,6 +57,7 @@ const App = () => {
           setImg(prevState=>{
             return [...prevState,image]
           })
+         
         }
         setLoading(false);
       }
@@ -91,7 +93,21 @@ const App = () => {
       setLoading(true);
       ethContract.methods.uploadImage(result[0].hash,description).send({from:account}).on('transactionHash',(hash)=>{
         setLoading(false);
+        
       })
+    })
+  }
+
+  const tipImageOwner = (id, tipAmount)=> {
+    setLoading(true);
+    ethContract.methods.tipImageOwner(id).send({ from: account, value: tipAmount }).on('transactionHash', async(hash) => {
+      /** */
+
+     
+
+      /* */
+      setLoading(false);
+     
     })
   }
 
@@ -103,9 +119,7 @@ const App = () => {
           <p>Loading...</p>
         </div>
       ) : (
-        <Main captureFile={captureFile} uploadImage={uploadImage} images={img}
-        // Code...
-        />
+        <Main  captureFile={captureFile} uploadImage={uploadImage} images={img} tipImageOwner={tipImageOwner} />
       )}
     </div>
   );

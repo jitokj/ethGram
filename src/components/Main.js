@@ -1,7 +1,24 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Identicon from "identicon.js";
+import Web3 from "web3";
 
 const Main = (props) => {
+  const [web3,setWeb3] = useState(null);
+ 
+  useEffect(()=>{
+    const ethereum = window.ethereum;
+      if(ethereum){
+        console.log("props.image--> ",props.images[0].tipAmount);
+       setWeb3(new Web3(window.ethereum));
+       
+      }
+      else {
+        alert("install metamask to continue");
+      }
+  },[]);
+
+  
+
   const inputEl = useRef(null);
   return (
     <div className="container-fluid mt-5">
@@ -27,7 +44,7 @@ const Main = (props) => {
                         id="imageDescription"
                         type="text"
                         ref={inputEl}
-                        // ref={(input) => { imageDescription = input }}
+                       
                         className="form-control"
                         placeholder="Image description..."
                         required />
@@ -43,6 +60,7 @@ const Main = (props) => {
                   <div className="card mb-4" key={key} >
                     <div className="card-header">
                       <img
+                      alt="identicon"
                         className='mr-2'
                         width='30'
                         height='30'
@@ -52,20 +70,21 @@ const Main = (props) => {
                     </div>
                     <ul id="imageList" className="list-group list-group-flush">
                       <li className="list-group-item">
-                        <p className="text-center"><img src={`https://ipfs.infura.io/ipfs/${image.hashes}`} style={{ maxWidth: '420px'}}/></p>
+                        <p className="text-center"><img alt="hashedImage" src={`https://ipfs.infura.io/ipfs/${image.hashes}`} style={{ maxWidth: '420px'}}/></p>
                         <p>{image.description}</p>
                       </li>
                       <li key={key} className="list-group-item py-2">
                         <small className="float-left mt-1 text-muted">
-                          {/* TIPS: {window.web3.utils.fromWei(image.tipAmount.toString(), 'Ether')} ETH */}
+                        TIPS: {image.tipAmount.toString()/Math.pow(10,18)} ETH
+                       
                         </small>
                         <button
                           className="btn btn-link btn-sm float-right pt-0"
                           name={image.id}
                           onClick={(event) => {
-                            // let tipAmount = window.web3.utils.toWei('0.1', 'Ether')
-                            // console.log(event.target.name, tipAmount)
-                            // props.tipImageOwner(event.target.name, tipAmount)
+                            let tipAmount = web3.utils.toWei('0.1', 'Ether')
+                            console.log(event.target.name, tipAmount)
+                            props.tipImageOwner(event.target.name, tipAmount)
                           }}
                         >
                           TIP 0.1 ETH
